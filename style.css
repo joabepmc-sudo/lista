@@ -47,11 +47,11 @@ body {
   max-width: 800px;
 }
 
-/* setas laterais */
+/* setas */
 #controls {
   position: fixed;
   right: 20px;
-  bottom: 140px;
+  bottom: 160px;
   display: flex;
   flex-direction: column;
   gap: 12px;
@@ -67,22 +67,27 @@ body {
   color: white;
 }
 
-/* 🔥 LAYOUT DOS BOTÕES */
+/* 🔥 CONTAINER PRINCIPAL DOS BOTÕES */
 #actions {
   position: fixed;
   bottom: 20px;
   width: 100%;
+
   display: flex;
-  justify-content: space-between; /* esquerda x direita */
-  align-items: center;
+  flex-wrap: wrap; /* 🔥 ESSENCIAL */
+  justify-content: space-between;
+  align-items: flex-end;
+
   padding: 0 20px;
   box-sizing: border-box;
+  gap: 10px;
 }
 
-/* grupo da esquerda */
+/* grupo esquerda */
 #leftActions {
   display: flex;
   gap: 15px;
+  width: 100%;
 }
 
 /* botões padrão */
@@ -116,20 +121,22 @@ body {
   border-radius: 16px;
 }
 
-/* 🚀 BOTÃO PRINCIPAL GIGANTE */
+/* 🚀 BOTÃO GIGANTE */
 #knowBtn {
   background: #2ecc71;
   color: white;
 
-  padding: 60px 80px;   /* 🔥 TRIPLICADO */
-  font-size: 56px;      /* 🔥 grande */
-  min-width: 260px;
-  border-radius: 24px;
+  width: 100%;              /* 🔥 ocupa toda largura */
+  text-align: center;
 
-  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+  padding: 70px 40px;       /* 🔥 enorme */
+  font-size: 56px;          /* 🔥 gigante */
+  border-radius: 28px;
+
+  box-shadow: 0 20px 50px rgba(0,0,0,0.8);
 }
 
-/* foguete */
+/* 🚀 foguete */
 .foguete {
   position: fixed;
   bottom: 0;
@@ -137,13 +144,14 @@ body {
   animation: subir 1.2s ease-out forwards;
 }
 
-/* explosão */
+/* 🎆 explosão */
 .explosao {
   position: fixed;
   font-size: 42px;
   animation: explodir 0.8s ease-out forwards;
 }
 
+/* animações */
 @keyframes subir {
   0% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(-70vh); opacity: 1; }
