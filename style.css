@@ -53,11 +53,15 @@ body {
 }
 
 #controls button {
-  padding: 12px;
-  font-size: 18px;
-  border-radius: 10px;
-  border: none;
-  cursor: pointer;
+  padding: 18px;
+  font-size: 22px;
+  border-radius: 14px;
+}
+
+#actions button {
+  padding: 18px 28px;
+  font-size: 20px;
+  border-radius: 16px;
 }
 
 #actions {
