@@ -16,7 +16,7 @@ body {
   z-index: 10;
 }
 
-/* container principal */
+/* container */
 #container {
   height: 100vh;
   width: 100vw;
@@ -47,7 +47,7 @@ body {
   max-width: 800px;
 }
 
-/* botões laterais (setas) */
+/* setas laterais */
 #controls {
   position: fixed;
   right: 20px;
@@ -67,24 +67,28 @@ body {
   color: white;
 }
 
-/* botões principais */
+/* 🔥 LAYOUT DOS BOTÕES */
 #actions {
   position: fixed;
   bottom: 20px;
   width: 100%;
   display: flex;
-  justify-content: center;
-  gap: 20px;
+  justify-content: space-between; /* esquerda x direita */
+  align-items: center;
+  padding: 0 20px;
+  box-sizing: border-box;
 }
 
-/* 🔥 BOTÕES GRANDES */
+/* grupo da esquerda */
+#leftActions {
+  display: flex;
+  gap: 15px;
+}
+
+/* botões padrão */
 #actions button {
-  padding: 22px 36px;
-  font-size: 24px;
-  border-radius: 18px;
   border: none;
   cursor: pointer;
-  min-width: 170px;
   font-weight: bold;
   box-shadow: 0 10px 30px rgba(0,0,0,0.5);
   transition: transform 0.15s ease, box-shadow 0.15s ease;
@@ -92,26 +96,40 @@ body {
 
 #actions button:active {
   transform: scale(0.92);
-  box-shadow: 0 5px 15px rgba(0,0,0,0.7);
 }
 
-/* cores */
-#knowBtn {
-  background: #2ecc71;
-  color: white;
-}
-
+/* 🔁 revisar */
 #reviewBtn {
   background: #e67e22;
   color: white;
+  padding: 18px 24px;
+  font-size: 18px;
+  border-radius: 16px;
 }
 
+/* 🔄 reiniciar */
 #resetBtn {
   background: #3498db;
   color: white;
+  padding: 18px 24px;
+  font-size: 18px;
+  border-radius: 16px;
 }
 
-/* 🚀 foguete */
+/* 🚀 BOTÃO PRINCIPAL GIGANTE */
+#knowBtn {
+  background: #2ecc71;
+  color: white;
+
+  padding: 60px 80px;   /* 🔥 TRIPLICADO */
+  font-size: 36px;      /* 🔥 grande */
+  min-width: 260px;
+  border-radius: 24px;
+
+  box-shadow: 0 15px 40px rgba(0,0,0,0.7);
+}
+
+/* foguete */
 .foguete {
   position: fixed;
   bottom: 0;
@@ -119,14 +137,13 @@ body {
   animation: subir 1.2s ease-out forwards;
 }
 
-/* 🎆 explosão */
+/* explosão */
 .explosao {
   position: fixed;
   font-size: 42px;
   animation: explodir 0.8s ease-out forwards;
 }
 
-/* animações */
 @keyframes subir {
   0% { transform: translateY(0); opacity: 1; }
   100% { transform: translateY(-70vh); opacity: 1; }
