@@ -1,11 +1,82 @@
-ENG
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
+O ramal de descarga recebe o esgoto diretamente dos aparelhos sanitários
+O ramal de esgoto recebe o esgoto dos ramais de descarga e conduz ao sistema principal
+A curva B do disjuntor atua entre 3 e 5 vezes a corrente nominal
+A curva B é indicada para cargas residenciais e resistivas de baixa intensidade como chuveiros e tomadas
+A curva C do disjuntor atua entre 5 e 10 vezes a corrente nominal
+A curva C é indicada para cargas indutivas de média partida como motores pequenos e ar-condicionado
+A curva D do disjuntor atua entre 10 e 20 vezes a corrente nominal
+A curva D é indicada para grandes motores e transformadores com alta corrente de partida
+O anteprojeto arquitetônico utiliza estudo preliminar levantamento topográfico e legislação vigente como base
+O anteprojeto arquitetônico gera plantas cortes fachadas e detalhes construtivos da edificação
+O anteprojeto arquitetônico inclui memorial descritivo da edificação e de seus componentes
+Ramais de descarga e esgoto devem garantir escoamento por gravidade com declividade constante
+A declividade mínima é de 2 por cento para tubulações até 75 mm
+A declividade mínima é de 1 por cento para tubulações iguais ou superiores a 100 mm
+O número de equações por rótula depende da análise estrutural do sistema
+Furos em vigas não podem ultrapassar um terço da largura da viga na região do furo
+A distância mínima do furo à face da viga deve ser de 5 cm e duas vezes o cobrimento
+Furos em sequência devem ter espaçamento mínimo de 5 cm ou diâmetro do furo
+Aberturas em vigas exigem verificação de cisalhamento e flexão
+A retirada de escoramento deve ocorrer em no mínimo 14 dias salvo concretos especiais
+A retirada de formas depende da resistência e módulo de elasticidade do concreto
+O módulo de elasticidade pode ser obtido por correlação com resistência à compressão
+O módulo de elasticidade é também chamado de módulo de deformação inicial
+O teor de ar no concreto pode ser medido por método gravimétrico ou pressométrico
+O método gravimétrico compara volume real e teórico do concreto
+O método pressométrico usa pressão baseada na lei de Boyle para gases
+O método pressométrico não é adequado para agregados leves ou muito porosos
+Superfícies em bom estado seguem preparação padrão de aplicação de revestimentos
+Superfícies com imperfeições devem ser lixadas e corrigidas com massa niveladora
+Superfícies com mofo devem ser lavadas com solução de água e água sanitária
+Superfícies com gordura devem ser lavadas com detergente neutro
+Superfícies úmidas exigem identificação e tratamento da origem
+Alicerce é sinônimo de viga baldrame segundo entendimento de prova
+Alicerce ou baldrame distribui cargas lineares para o solo
+Argamassa com umidade exige correção de massa de areia devido ao teor de água
+Umidade da areia é relação entre massa de água e massa de areia seca
+Inchamento da areia altera o volume aparente do material em obra
+Vigas não podem ter largura menor que 12 cm
+Vigas-parede não podem ter largura menor que 15 cm
+Limites podem chegar a 10 cm em casos excepcionais com restrições normativas
+Lajes maciças possuem espessuras mínimas variando entre 7 e 16 cm
+Lajes em balanço exigem espessura mínima maior que lajes apoiadas
+Lajes nervuradas exigem espessura mínima de mesa proporcional ao vão
+Nervuras não podem ter espessura inferior a 5 cm
+Fórmulas dinâmicas de estacas avaliam nega e repique elástico
+A cicatrização reduz a nega ao longo do tempo em certos solos
+A relaxação pode aumentar a nega ao longo do tempo
+Sapatas possuem dimensão mínima de 60 cm segundo norma
+Incineração destrói matéria orgânica e gera cinzas gases e energia térmica
+Pirólise ocorre sem oxigênio e gera gás óleo e carvão
+Cromo aumenta resistência à corrosão do aço
+Níquel aumenta resistência mecânica e tenacidade do aço
+Molibdênio melhora resistência a altas temperaturas
+Vanádio aumenta dureza e resistência ao desgaste
+Tungstênio aumenta resistência ao desgaste por abrasão
+Estrutura de telhado inclui estrutura principal e estrutura secundária
+Estrutura principal recebe e distribui cargas ao edifício
+Estrutura secundária sustenta telhas por meio de terças e caibros
+Peças de madeira possuem áreas mínimas e espessuras definidas por norma
+Peças principais têm área mínima maior que peças secundárias
+Estruturas industrializadas podem ter dimensões menores com comprovação técnica
+Fundações diretas transmitem carga diretamente ao solo
+Fundações indiretas transmitem carga por atrito lateral
+Filler é pó de pedra obtido da britagem fina
+Filler melhora trabalhabilidade e reduz permeabilidade de argamassas
+A madeira apresenta higroscopia com variação dimensional
+Aumento de umidade provoca inchamento da madeira
+Redução de umidade provoca retração da madeira
+Estribos em pilares evitam flambagem das barras longitudinais
+Diâmetro mínimo de estribo é 5 mm ou um quarto da barra longitudinal
+Espaçamento entre estribos depende da dimensão do pilar e diâmetro das barras
+Número de estribos é dado pela relação entre altura e espaçamento
+Temperatura do concreto deve ficar entre 5 e 32 graus
+Concretagem deve ser suspensa em temperaturas extremas ou condições adversas
+Chuva pode comprometer resistência e qualidade do concreto
+Consolos curtos dependem da relação entre a distância e a altura
+Nível de água em estruturas deve considerar segurança contra extravasão
+
+Taxa de ocupação representa uso do terreno pela edificação
+Coeficiente de aproveitamento representa potencial construtivo do terreno
+
+Andaimes sem fixação não podem exceder quatro vezes a menor base de apoio
