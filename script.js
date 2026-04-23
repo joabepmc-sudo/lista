@@ -116,21 +116,32 @@ window.addEventListener("scroll", () => {
 });
 
 /* 🎯 seleção de matéria */
-document.querySelectorAll(".materia").forEach(btn => {
-  btn.onclick = async () => {
-    const arquivo = btn.dataset.arquivo;
+async function carregarMaterias() {
+  const res = await fetch("materias.json");
+  const materias = await res.json();
 
-    document.getElementById("home").style.display = "none";
-    document.getElementById("app").style.display = "block";
+  const home = document.getElementById("home");
 
-    frases = embaralhar(await carregarFrases(arquivo));
+  materias.forEach(m => {
+    const btn = document.createElement("button");
+    btn.className = "materia";
+    btn.textContent = m.nome;
 
-    if (revisao.length > 0) {
-      frases = [...revisao, ...frases];
-      revisao = [];
-      localStorage.removeItem("revisao");
-    }
+    btn.onclick = async () => {
+      document.getElementById("home").style.display = "none";
+      document.getElementById("app").style.display = "block";
 
-    renderizar();
-  };
-});
+      frases = embaralhar(await carregarFrases(m.arquivo));
+
+      if (revisao.length > 0) {
+        frases = [...revisao, ...frases];
+        revisao = [];
+        localStorage.removeItem("revisao");
+      }
+
+      renderizar();
+    };
+
+    home.appendChild(btn);
+  });
+}
