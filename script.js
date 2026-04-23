@@ -8,8 +8,8 @@ function embaralhar(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
-async function carregarFrases() {
-  const res = await fetch("frases.txt");
+async function carregarFrases(arquivo) {
+  const res = await fetch(arquivo);
   const texto = await res.text();
   return texto.split("\n").filter(f => f.trim() !== "");
 }
@@ -53,7 +53,7 @@ function irPara(index) {
   atualizarProgresso();
 }
 
-/* 🚀 foguetes */
+/* foguetes */
 function soltarFoguetes() {
   for (let i = 0; i < 6; i++) {
     const foguete = document.createElement("div");
@@ -65,7 +65,6 @@ function soltarFoguetes() {
 
     document.body.appendChild(foguete);
 
-    // quando sobe, explode
     setTimeout(() => {
       foguete.remove();
 
@@ -79,13 +78,11 @@ function soltarFoguetes() {
       document.body.appendChild(explosao);
 
       setTimeout(() => explosao.remove(), 800);
-
     }, 1200);
   }
 }
 
 /* botões */
-
 document.getElementById("nextBtn").onclick = () => irPara(indexAtual + 1);
 document.getElementById("prevBtn").onclick = () => irPara(indexAtual - 1);
 
@@ -118,16 +115,22 @@ window.addEventListener("scroll", () => {
   atualizarProgresso();
 });
 
-async function iniciar() {
-  frases = embaralhar(await carregarFrases());
+/* 🎯 seleção de matéria */
+document.querySelectorAll(".materia").forEach(btn => {
+  btn.onclick = async () => {
+    const arquivo = btn.dataset.arquivo;
 
-  if (revisao.length > 0) {
-    frases = [...revisao, ...frases];
-    revisao = [];
-    localStorage.removeItem("revisao");
-  }
+    document.getElementById("home").style.display = "none";
+    document.getElementById("app").style.display = "block";
 
-  renderizar();
-}
+    frases = embaralhar(await carregarFrases(arquivo));
 
-iniciar();
+    if (revisao.length > 0) {
+      frases = [...revisao, ...frases];
+      revisao = [];
+      localStorage.removeItem("revisao");
+    }
+
+    renderizar();
+  };
+});
