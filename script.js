@@ -55,14 +55,32 @@ function irPara(index) {
 
 /* 🚀 foguetes */
 function soltarFoguetes() {
-  for (let i = 0; i < 10; i++) {
+  for (let i = 0; i < 6; i++) {
     const foguete = document.createElement("div");
     foguete.className = "foguete";
     foguete.textContent = "🚀";
-    foguete.style.left = Math.random() * 100 + "vw";
+
+    const posX = Math.random() * 100;
+    foguete.style.left = posX + "vw";
 
     document.body.appendChild(foguete);
-    setTimeout(() => foguete.remove(), 1000);
+
+    // quando sobe, explode
+    setTimeout(() => {
+      foguete.remove();
+
+      const explosao = document.createElement("div");
+      explosao.className = "explosao";
+      explosao.textContent = "🎆";
+
+      explosao.style.left = posX + "vw";
+      explosao.style.top = "30vh";
+
+      document.body.appendChild(explosao);
+
+      setTimeout(() => explosao.remove(), 800);
+
+    }, 1200);
   }
 }
 
