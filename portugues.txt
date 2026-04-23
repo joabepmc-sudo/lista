@@ -1,11 +1,85 @@
-Portugues
-1
-2
-3
-4
-5
-6
-7
-8
-9
-10
+Pronomes são palavras que representam ou acompanham um termo substantivo.
+Pronome adjetivo é aquele que acompanha o substantivo determinando-o ou modificando-o.
+Pronome substantivo é aquele que substitui o substantivo assumindo sua posição na frase.
+Pronomes interrogativos são utilizados para formular perguntas diretas ou indiretas.
+Os termos que quem qual e quanto funcionam como pronomes interrogativos primordiais.
+Interrogativas indiretas possuem intenção de pergunta mas não utilizam ponto de interrogação.
+O termo o em estruturas como o que é expletivo e serve apenas para realce.
+Pronomes indefinidos referem-se à terceira pessoa e indicam quantidade de maneira vaga.
+As palavras certo e bastante classificam-se como pronomes indefinidos se vierem antes do substantivo.
+Certo e bastante funcionam como adjetivos quando posicionados após o substantivo.
+Bastante assume a classe de advérbio ao modificar verbos adjetivos ou outros advérbios.
+O pronome indefinido todo sem artigo acompanhante possui sentido equivalente a qualquer.
+O pronome todo seguido de artigo indica ideia de totalidade ou completude da unidade.
+Pronomes possessivos expressam relações de posse entre as pessoas do discurso.
+Pronomes pessoais oblíquos átonos podem assumir valor semântico de posse na oração.
+O pronome oblíquo com valor possessivo exerce a função sintática de adjunto adnominal.
+Possessivos devem concordar em gênero e número com o substantivo objeto da posse.
+Pronomes demonstrativos indicam a posição de elementos no tempo no espaço e no texto.
+Anáfora ocorre quando o pronome retoma um termo ou ideia já mencionados anteriormente.
+Catáfora ocorre quando o pronome antecipa ou anuncia um termo que ainda será dito.
+Função endofórica ocorre quando a referência do pronome está contida dentro do próprio texto.
+Função exofórica ou dêitica remete a elementos do contexto externo como o falante e o tempo.
+Os pronomes este e esta indicam o tempo presente ou o período de tempo corrente.
+Os pronomes esse e essa indicam um passado recente ou um futuro próximo.
+Aquele e aquela são demonstrativos usados para referências a passado ou futuro distantes.
+Este e esta apontam para algo que está fisicamente perto da pessoa que fala.
+Esse e essa apontam para algo que está fisicamente perto da pessoa com quem se fala.
+Aquele e aquela indicam que o objeto está longe tanto do falante quanto do ouvinte.
+Este é o demonstrativo adequado para introduzir uma informação nova e inédita no texto.
+Esse é o demonstrativo correto para retomar uma informação que já foi expressa.
+Aquele retoma o antecedente mais distante em uma relação entre dois termos citados.
+Este retoma o antecedente mais próximo em uma relação entre dois termos citados.
+As palavras o a os as funcionam como demonstrativos antes de relativo ou preposição de.
+Pronomes relativos ligam orações e retomam termos antecedentes para evitar repetições desnecessárias.
+Relativos são os termos responsáveis por introduzir as orações subordinadas adjetivas.
+O relativo variável o qual é utilizado para eliminar ambiguidades de referência no texto.
+Preposições de uma única sílaba devem ser posicionadas antes do pronome relativo que.
+Preposições com mais de uma sílaba exigem obrigatoriamente o uso de pronomes relativos variáveis.
+O pronome relativo quem refere-se exclusivamente a pessoas ou a entes personificados.
+Relativos como quem e onde podem ser empregados de forma absoluta sem antecedente expresso.
+O pronome cujo indica posse e deve estar posicionado entre dois substantivos.
+É proibido por norma gramatical utilizar artigo definido imediatamente após o pronome cujo.
+O pronome cujo não admite substituição direta por qualquer outro tipo de pronome relativo.
+O relativo onde deve ser empregado apenas para fazer referência direta a lugares físicos.
+Aonde é utilizado quando o verbo indica movimento e exige a preposição a de direção.
+Donde equivale a de onde e indica a procedência ou origem de um lugar.
+Como funciona como pronome relativo quando o antecedente indica ideia de modo ou maneira.
+Quando atua como pronome relativo se o termo antecedente possuir sentido de tempo.
+Quanto é classificado como pronome relativo quando o antecedente expressa ideia de quantidade.
+Pronomes de tratamento são formas de cortesia usadas para se dirigir a certas autoridades.
+Vossa Excelência é a forma de tratamento para autoridades de alto escalão do Estado.
+A concordância verbal com pronomes de tratamento deve ocorrer sempre na terceira pessoa.
+Usa-se obrigatoriamente possessivos de terceira pessoa como seu e sua com formas de tratamento.
+Adjetivos concordam com o sexo da pessoa tratada e não com o gênero do substantivo de tratamento.
+Vossa Excelência é o termo usado no trato direto com a própria autoridade presente.
+Sua Excelência é o termo usado para se referir a uma autoridade ausente de quem se fala.
+Pronomes pessoais retos exercem primordialmente a função sintática de sujeito da oração.
+Pronomes pessoais oblíquos átonos desempenham o papel de complementos verbais na frase.
+Os pronomes o a os as exercem exclusivamente a função sintática de objeto direto.
+O pronome lhe exerce exclusivamente a função sintática de objeto indireto na oração.
+Os pronomes me te se nos vos podem ser objetos diretos ou indiretos conforme a regência.
+Pronomes oblíquos tônicos são formas fortes que aparecem sempre precedidas por preposição.
+Usa-se mim e ti após a preposição entre em estruturas que indicam reciprocidade de ação.
+Usa-se pronome reto após preposição se este funcionar como sujeito de um verbo no infinitivo.
+Verbos terminados em r s ou z recebem as formas lo la los las após perderem tal terminação.
+Verbos com terminação em som nasal recebem as formas pronominais no na nos nas.
+Corta-se a letra s final de verbos na primeira pessoa do plural seguidos pelo pronome nos.
+Colocação pronominal estuda as regras de posição dos pronomes oblíquos átonos na frase.
+Próclise ocorre quando o pronome oblíquo é posicionado imediatamente antes do verbo.
+Ênclise ocorre quando o pronome oblíquo é posicionado imediatamente após o verbo.
+Mesóclise ocorre quando o pronome oblíquo é inserido no meio da estrutura do verbo.
+Palavras de sentido negativo atraem obrigatoriamente o pronome átono para a posição de próclise.
+Advérbios sem pausa por pontuação funcionam como palavras atrativas para o uso da próclise.
+Pronomes relativos exercem força atrativa exigindo a colocação do pronome antes do verbo.
+Pronomes indefinidos e interrogativos exigem o uso da próclise conforme a norma culta.
+Conjunções subordinativas funcionam como fatores de próclise obrigatória na oração.
+É proibido por regra geral iniciar qualquer oração com pronome oblíquo átono.
+É proibida a ênclise em verbos conjugados nos tempos futuros do modo indicativo.
+É terminantemente proibido o uso de ênclise após verbos conjugados no particípio.
+Recomenda-se evitar o início de oração com pronome átono imediatamente após uma vírgula.
+A ênclise é facultativa em verbos no infinitivo mesmo diante da presença de palavras atrativas.
+Usa-se próclise obrigatória em frases optativas que exprimem um desejo ou apelo.
+Usa-se próclise na construção formada pela preposição em seguida de um verbo no gerúndio.
+Em locuções verbais o pronome posicionado no meio não deve receber hífen se houver atração.
+Nas locuções o pronome pode ser colocado antes do auxiliar ou após o verbo principal.
