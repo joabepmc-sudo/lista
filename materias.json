@@ -1,0 +1,5 @@
+[
+  { "nome": "Direito", "arquivo": "direito.txt" },
+  { "nome": "Português", "arquivo": "portugues.txt" },
+  { "nome": "Engenharia", "arquivo": "engenharia.txt" }
+]
