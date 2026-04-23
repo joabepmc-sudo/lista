@@ -7,25 +7,38 @@
 </head>
 <body>
 
-<div id="topbar">
-  <span id="progresso">0 / 0</span>
+<!-- 🏠 TELA INICIAL -->
+<div id="home">
+  <h1>📚 Escolha a matéria</h1>
+
+  <button class="materia" data-arquivo="direito.txt">Direito</button>
+  <button class="materia" data-arquivo="portugues.txt">Português</button>
+  <button class="materia" data-arquivo="engenharia.txt">Engenharia</button>
 </div>
 
-<div id="container"></div>
+<!-- 📱 APP -->
+<div id="app" style="display:none;">
 
-<div id="controls">
-  <button id="prevBtn">⬆️</button>
-  <button id="nextBtn">⬇️</button>
-</div>
-
-<!-- 🔥 AQUI MUDA -->
-<div id="actions">
-  <div id="leftActions">
-    <button id="reviewBtn">🔁 Revisar</button>
-    <button id="resetBtn">🔄 Reiniciar</button>
+  <div id="topbar">
+    <span id="progresso">0 / 0</span>
   </div>
 
-  <button id="knowBtn">✅ Já sei</button>
+  <div id="container"></div>
+
+  <div id="controls">
+    <button id="prevBtn">⬆️</button>
+    <button id="nextBtn">⬇️</button>
+  </div>
+
+  <div id="actions">
+    <div id="leftActions">
+      <button id="reviewBtn">🔁 Revisar</button>
+      <button id="resetBtn">🔄 Reiniciar</button>
+    </div>
+
+    <button id="knowBtn">✅ Já sei</button>
+  </div>
+
 </div>
 
 <script src="script.js"></script>
