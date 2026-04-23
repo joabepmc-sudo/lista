@@ -1,9 +1,18 @@
 body {
   margin: 0;
-  font-family: Arial, sans-serif;
-  background: #000;
+  font-family: 'Segoe UI', sans-serif;
+  background: linear-gradient(180deg, #0f0f0f, #1a1a1a);
   color: #fff;
   overflow: hidden;
+}
+
+#topbar {
+  position: fixed;
+  top: 10px;
+  left: 20px;
+  font-size: 18px;
+  opacity: 0.8;
+  z-index: 10;
 }
 
 #container {
@@ -11,6 +20,7 @@ body {
   width: 100vw;
   overflow-y: scroll;
   scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
 }
 
 .card {
@@ -18,9 +28,61 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 40px;
   text-align: center;
-  padding: 20px;
-  font-size: 28px;
+  font-size: 40px; /* 🔥 LETRA GRANDE */
+  line-height: 1.4;
   scroll-snap-align: start;
-  border-bottom: 1px solid #333;
+}
+
+.card-inner {
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(10px);
+  border-radius: 20px;
+  padding: 30px;
+  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+}
+
+#controls {
+  position: fixed;
+  right: 20px;
+  bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#controls button {
+  padding: 12px;
+  font-size: 18px;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+}
+
+#actions {
+  position: fixed;
+  bottom: 20px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+#actions button {
+  padding: 14px 20px;
+  font-size: 18px;
+  border-radius: 12px;
+  border: none;
+  cursor: pointer;
+}
+
+#knowBtn {
+  background: #2ecc71;
+  color: white;
+}
+
+#reviewBtn {
+  background: #e67e22;
+  color: white;
 }
