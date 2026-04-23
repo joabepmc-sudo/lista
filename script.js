@@ -1,6 +1,8 @@
 let frases = [];
 let indexAtual = 0;
+
 let revisao = JSON.parse(localStorage.getItem("revisao")) || [];
+let acertos = parseInt(localStorage.getItem("acertos")) || 0;
 
 function embaralhar(array) {
   return array.sort(() => Math.random() - 0.5);
@@ -51,10 +53,32 @@ function irPara(index) {
   atualizarProgresso();
 }
 
+/* 🚀 foguetes */
+function soltarFoguetes() {
+  for (let i = 0; i < 10; i++) {
+    const foguete = document.createElement("div");
+    foguete.className = "foguete";
+    foguete.textContent = "🚀";
+    foguete.style.left = Math.random() * 100 + "vw";
+
+    document.body.appendChild(foguete);
+    setTimeout(() => foguete.remove(), 1000);
+  }
+}
+
+/* botões */
+
 document.getElementById("nextBtn").onclick = () => irPara(indexAtual + 1);
 document.getElementById("prevBtn").onclick = () => irPara(indexAtual - 1);
 
 document.getElementById("knowBtn").onclick = () => {
+  acertos++;
+  localStorage.setItem("acertos", acertos);
+
+  if (acertos % 10 === 0) {
+    soltarFoguetes();
+  }
+
   frases.splice(indexAtual, 1);
   renderizar();
   irPara(indexAtual);
@@ -66,6 +90,11 @@ document.getElementById("reviewBtn").onclick = () => {
   irPara(indexAtual + 1);
 };
 
+document.getElementById("resetBtn").onclick = () => {
+  localStorage.clear();
+  location.reload();
+};
+
 window.addEventListener("scroll", () => {
   indexAtual = Math.round(window.scrollY / window.innerHeight);
   atualizarProgresso();
@@ -74,7 +103,6 @@ window.addEventListener("scroll", () => {
 async function iniciar() {
   frases = embaralhar(await carregarFrases());
 
-  // coloca frases de revisão no início
   if (revisao.length > 0) {
     frases = [...revisao, ...frases];
     revisao = [];
