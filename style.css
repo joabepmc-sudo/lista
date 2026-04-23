@@ -30,23 +30,23 @@ body {
   justify-content: center;
   padding: 40px;
   text-align: center;
-  font-size: 40px; /* 🔥 LETRA GRANDE */
+  font-size: 42px; /* 🔥 maior */
   line-height: 1.4;
   scroll-snap-align: start;
 }
 
 .card-inner {
   background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 30px;
-  box-shadow: 0 10px 40px rgba(0,0,0,0.6);
+  backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 35px;
+  box-shadow: 0 10px 50px rgba(0,0,0,0.7);
 }
 
 #controls {
   position: fixed;
   right: 20px;
-  bottom: 100px;
+  bottom: 120px;
   display: flex;
   flex-direction: column;
   gap: 10px;
@@ -66,12 +66,12 @@ body {
   width: 100%;
   display: flex;
   justify-content: center;
-  gap: 20px;
+  gap: 15px;
 }
 
 #actions button {
-  padding: 14px 20px;
-  font-size: 18px;
+  padding: 14px 18px;
+  font-size: 16px;
   border-radius: 12px;
   border: none;
   cursor: pointer;
@@ -85,4 +85,22 @@ body {
 #reviewBtn {
   background: #e67e22;
   color: white;
+}
+
+#resetBtn {
+  background: #3498db;
+  color: white;
+}
+
+/* 🚀 foguetes */
+.foguete {
+  position: fixed;
+  bottom: 0;
+  font-size: 30px;
+  animation: subir 1s ease-out forwards;
+}
+
+@keyframes subir {
+  0% { transform: translateY(0); opacity: 1; }
+  100% { transform: translateY(-100vh); opacity: 0; }
 }
