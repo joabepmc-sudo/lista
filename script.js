@@ -115,33 +115,43 @@ window.addEventListener("scroll", () => {
   atualizarProgresso();
 });
 
-/* 🎯 seleção de matéria */
 async function carregarMaterias() {
-  const res = await fetch("materias.json");
-  const materias = await res.json();
+  try {
+    const res = await fetch("materias.json");
+    const materias = await res.json();
 
-  const home = document.getElementById("home");
+    const home = document.getElementById("home");
+    home.innerHTML = "<h1>📚 Escolha a matéria</h1>";
 
-  materias.forEach(m => {
-    const btn = document.createElement("button");
-    btn.className = "materia";
-    btn.textContent = m.nome;
+    materias.forEach(m => {
+      const btn = document.createElement("button");
+      btn.className = "materia";
+      btn.textContent = m.nome;
 
-    btn.onclick = async () => {
-      document.getElementById("home").style.display = "none";
-      document.getElementById("app").style.display = "block";
+      btn.onclick = async () => {
+        document.getElementById("home").style.display = "none";
+        document.getElementById("app").style.display = "block";
 
-      frases = embaralhar(await carregarFrases(m.arquivo));
+        indexAtual = 0;
+        window.scrollTo({ top: 0 });
 
-      if (revisao.length > 0) {
-        frases = [...revisao, ...frases];
-        revisao = [];
-        localStorage.removeItem("revisao");
-      }
+        frases = embaralhar(await carregarFrases(m.arquivo));
 
-      renderizar();
-    };
+        if (revisao.length > 0) {
+          frases = [...revisao, ...frases];
+          revisao = [];
+          localStorage.removeItem("revisao");
+        }
 
-    home.appendChild(btn);
-  });
+        renderizar();
+      };
+
+      home.appendChild(btn);
+    });
+
+  } catch (erro) {
+    console.error("Erro ao carregar matérias:", erro);
+    document.getElementById("home").innerHTML =
+      "<h2>Erro ao carregar matérias 😢</h2>";
+  }
 }
