@@ -4,15 +4,35 @@ let indexAtual = 0;
 let revisao = JSON.parse(localStorage.getItem("revisao")) || [];
 let acertos = parseInt(localStorage.getItem("acertos")) || 0;
 
+/* =========================
+   UTIL
+========================= */
+
 function embaralhar(array) {
   return array.sort(() => Math.random() - 0.5);
 }
 
 async function carregarFrases(arquivo) {
-  const res = await fetch(arquivo);
-  const texto = await res.text();
-  return texto.split("\n").filter(f => f.trim() !== "");
+  try {
+    const res = await fetch(arquivo);
+
+    if (!res.ok) {
+      throw new Error("Arquivo não encontrado: " + arquivo);
+    }
+
+    const texto = await res.text();
+    return texto.split("\n").filter(f => f.trim() !== "");
+
+  } catch (err) {
+    console.error("Erro ao carregar arquivo:", err);
+    alert("Erro ao carregar: " + arquivo);
+    return [];
+  }
 }
+
+/* =========================
+   UI
+========================= */
 
 function atualizarProgresso() {
   document.getElementById("progresso").textContent =
@@ -53,7 +73,10 @@ function irPara(index) {
   atualizarProgresso();
 }
 
-/* foguetes */
+/* =========================
+   FOGOS
+========================= */
+
 function soltarFoguetes() {
   for (let i = 0; i < 6; i++) {
     const foguete = document.createElement("div");
@@ -82,42 +105,52 @@ function soltarFoguetes() {
   }
 }
 
-/* botões */
-document.getElementById("nextBtn").onclick = () => irPara(indexAtual + 1);
-document.getElementById("prevBtn").onclick = () => irPara(indexAtual - 1);
+/* =========================
+   APP LOGIC
+========================= */
 
-document.getElementById("knowBtn").onclick = () => {
-  acertos++;
-  localStorage.setItem("acertos", acertos);
+function iniciarEventos() {
 
-  if (acertos % 10 === 0) {
-    soltarFoguetes();
-  }
+  document.getElementById("nextBtn").onclick = () => irPara(indexAtual + 1);
+  document.getElementById("prevBtn").onclick = () => irPara(indexAtual - 1);
 
-  frases.splice(indexAtual, 1);
-  renderizar();
-  irPara(indexAtual);
-};
+  document.getElementById("knowBtn").onclick = () => {
+    acertos++;
+    localStorage.setItem("acertos", acertos);
 
-document.getElementById("reviewBtn").onclick = () => {
-  revisao.push(frases[indexAtual]);
-  localStorage.setItem("revisao", JSON.stringify(revisao));
-  irPara(indexAtual + 1);
-};
+    if (acertos % 10 === 0) {
+      soltarFoguetes();
+    }
 
-document.getElementById("resetBtn").onclick = () => {
-  localStorage.clear();
-  location.reload();
-};
+    frases.splice(indexAtual, 1);
+    renderizar();
+    irPara(indexAtual);
+  };
 
-window.addEventListener("scroll", () => {
-  indexAtual = Math.round(window.scrollY / window.innerHeight);
-  atualizarProgresso();
-});
+  document.getElementById("reviewBtn").onclick = () => {
+    revisao.push(frases[indexAtual]);
+    localStorage.setItem("revisao", JSON.stringify(revisao));
+    irPara(indexAtual + 1);
+  };
+
+  document.getElementById("resetBtn").onclick = () => {
+    localStorage.clear();
+    location.reload();
+  };
+}
+
+/* =========================
+   MATÉRIAS
+========================= */
 
 async function carregarMaterias() {
   try {
     const res = await fetch("materias.json");
+
+    if (!res.ok) {
+      throw new Error("Não achou materias.json");
+    }
+
     const materias = await res.json();
 
     const home = document.getElementById("home");
@@ -128,41 +161,44 @@ async function carregarMaterias() {
       btn.className = "materia";
       btn.textContent = m.nome;
 
-btn.onclick = async () => {
-  try {
-    console.log("Clicou em:", m.nome);
+      btn.onclick = async () => {
+        console.log("Clicou em:", m.nome);
 
-    document.getElementById("home").style.display = "none";
-    document.getElementById("app").style.display = "block";
+        document.getElementById("home").style.display = "none";
+        document.getElementById("app").style.display = "block";
 
-    indexAtual = 0;
-    window.scrollTo({ top: 0 });
+        indexAtual = 0;
+        window.scrollTo({ top: 0 });
 
-    const lista = await carregarFrases(m.arquivo);
-    console.log("Frases carregadas:", lista.length);
+        const lista = await carregarFrases(m.arquivo);
+        console.log("Frases carregadas:", lista.length);
 
-    frases = embaralhar(lista);
+        frases = embaralhar(lista);
 
-    if (revisao.length > 0) {
-      frases = [...revisao, ...frases];
-      revisao = [];
-      localStorage.removeItem("revisao");
-    }
+        if (revisao.length > 0) {
+          frases = [...revisao, ...frases];
+          revisao = [];
+          localStorage.removeItem("revisao");
+        }
 
-    renderizar();
-
-  } catch (erro) {
-    console.error("Erro ao clicar:", erro);
-    alert("Erro ao carregar essa matéria 😢");
-  }
-};
+        renderizar();
+      };
 
       home.appendChild(btn);
     });
 
-  } catch (erro) {
-    console.error("Erro ao carregar matérias:", erro);
+  } catch (err) {
+    console.error(err);
     document.getElementById("home").innerHTML =
       "<h2>Erro ao carregar matérias 😢</h2>";
   }
 }
+
+/* =========================
+   START
+========================= */
+
+window.addEventListener("DOMContentLoaded", () => {
+  carregarMaterias();
+  iniciarEventos();
+});
