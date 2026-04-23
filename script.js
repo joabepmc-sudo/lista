@@ -128,23 +128,34 @@ async function carregarMaterias() {
       btn.className = "materia";
       btn.textContent = m.nome;
 
-      btn.onclick = async () => {
-        document.getElementById("home").style.display = "none";
-        document.getElementById("app").style.display = "block";
+btn.onclick = async () => {
+  try {
+    console.log("Clicou em:", m.nome);
 
-        indexAtual = 0;
-        window.scrollTo({ top: 0 });
+    document.getElementById("home").style.display = "none";
+    document.getElementById("app").style.display = "block";
 
-        frases = embaralhar(await carregarFrases(m.arquivo));
+    indexAtual = 0;
+    window.scrollTo({ top: 0 });
 
-        if (revisao.length > 0) {
-          frases = [...revisao, ...frases];
-          revisao = [];
-          localStorage.removeItem("revisao");
-        }
+    const lista = await carregarFrases(m.arquivo);
+    console.log("Frases carregadas:", lista.length);
 
-        renderizar();
-      };
+    frases = embaralhar(lista);
+
+    if (revisao.length > 0) {
+      frases = [...revisao, ...frases];
+      revisao = [];
+      localStorage.removeItem("revisao");
+    }
+
+    renderizar();
+
+  } catch (erro) {
+    console.error("Erro ao clicar:", erro);
+    alert("Erro ao carregar essa matéria 😢");
+  }
+};
 
       home.appendChild(btn);
     });
